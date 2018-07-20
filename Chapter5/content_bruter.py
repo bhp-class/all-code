@@ -74,10 +74,10 @@ def dir_bruter(extensions=None):
                     print "[%d] => %s" % (response.code,url)
                     
             except urllib2.HTTPError,e:
-
                 if e.code != 404:
                     print "!!! %d => %s" % (e.code,url)
-                
+                pass
+            except urllib2.URLError,e:
                 pass
 
 
